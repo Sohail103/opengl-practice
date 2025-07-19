@@ -20,7 +20,7 @@ set(SOURCES
 )
 
 # Create executable
-add_executable(App ${SOURCES})
+add_executable(OpenGLApp ${SOURCES})
 
 # Link libraries
 target_link_libraries(OpenGLApp
