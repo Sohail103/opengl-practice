@@ -15,7 +15,7 @@ include_directories(
 
 # Source files
 set(SOURCES
-    main.cpp
+    example.cpp
     glad/src/gl.c
 )
 
