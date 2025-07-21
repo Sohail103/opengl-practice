@@ -39,14 +39,25 @@ int main()
 
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
+    /*Code to display a triangle - making and using a vertex buffer*/
+    float positions[6] = {-0.5f, -0.5f,
+                          0.0f, 0.5f,
+                          0.5f, -0.5f};
+
+    unsigned int buffer;
+    glGenBuffers(1, &buffer);
+    glBindBuffer(GL_ARRAY_BUFFER, buffer);
+    glBufferData(GL_ARRAY_BUFFER, 6 * sizeof(float), positions, GL_STATIC_DRAW);
+    /*End of code to display triangle*/
+
     while (!glfwWindowShouldClose(window))
     {
         glClearColor(0.1f, 0.2f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
-        /*user code begin*/
+        /* game loop */
 
-        /*user code end*/
+        /* game loop end */
 
         glfwSwapBuffers(window);
         glfwPollEvents();
