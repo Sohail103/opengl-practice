@@ -14,7 +14,6 @@ int main()
         std::cerr << "Failed to initialize GLFW\n";
         return -1;
     }
-
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
@@ -35,6 +34,8 @@ int main()
         std::cerr << "Failed to initialize GLAD\n";
         return -1;
     }
+
+    std::cout << "OpenGL Version: " << glGetString(GL_VERSION) << std::endl;
 
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
