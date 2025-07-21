@@ -57,6 +57,8 @@ int main()
 
         /* game loop */
 
+        glDrawArrays(GL_TRIANGLES, 0, 3); // use glDrawArrays if you dont have an index buffer
+
         /* game loop end */
 
         glfwSwapBuffers(window);
