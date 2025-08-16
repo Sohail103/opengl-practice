@@ -12,6 +12,13 @@ int main()
 
     GLFWwindow *window = glfwCreateWindow(800, 800, "window 1", NULL, NULL); // glfwCreate window takes
                                                                              // parameters width, height, name, fullscreen or not and one more parameter
+    if (window == NULL)
+    {
+        std::cout << "failed to create glfw window\n";
+        glfwTerminate();
+        return -1;
+    }
+    glfwMakeContextCurrent(window);
 
     glfwTerminate();
     return 0;
